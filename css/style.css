@@ -332,6 +332,11 @@ li{
     align-items: start;
     flex-wrap: wrap;
 }
+.hamburger{
+    display: none;
+}
+
+
 .a_list{
     display: inline-flex;
     align-items: flex-start;
@@ -1246,6 +1251,9 @@ svg.close{
         align-items: start;
         flex-wrap: wrap;
     }
+    .hamburger{
+        display: none;
+    }
     .a_list{
         display: inline-flex;
         align-items: flex-start;
@@ -1861,12 +1869,21 @@ svg.close{
     nav{
         float: left;
     }
+    .hamburger-button{
+        position: absolute;
+        top: 24px;
+        right: 0px;
+        background-color: transparent;
+        border: none;
+    }
+    .hamburger>svg{
+        fill: black;
+        stroke: black;
+    }
     address{
         float: right;
-    
-    
-        gap: 40px;
-    
+        display: none;
+        gap: 40px; 
     }
     body{
         font-family: Roboto, sans-serif;
@@ -1883,11 +1900,22 @@ svg.close{
         color: var(--white);
         max-width: 1440px;
         flex-shrink: 0; 
-        padding-left:80px;
-        padding-top: 97.5px;
+        margin-inline: auto;
+        padding-inline: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-h {
+        position: fixed;
+        inset: 0;
+        background-color: rgb(0 0 0 / 0.5);
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        transition: opacity 250ms;
         display: flex;
         flex-direction: row;
-
     }
     .photos.bigger_p, .photos.smaller_p{
         padding-inline: 16px;
@@ -1926,8 +1954,15 @@ svg.close{
         background: var(--white, #FFF);
         flex-wrap: wrap;
         align-items: center;
+        padding-top: 25.5px;
+        padding-bottom: 23.5px;
     }
-    
+    .hamburger-svg{
+
+         fill: var(--black);
+        stroke: var(--black);
+        stroke-width: 3px;
+    }
     .logo{
         font-weight: 800;
         text-transform: uppercase;
@@ -2074,19 +2109,24 @@ svg.close{
         border-top: none;
     }
     .lia{
-        font-weight: 500;
-        color: var(--navyblue-color);
-        line-height: 1.5;
-        letter-spacing: 0.02em;
+        font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111.111%;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    color: var(--navyblue-color);
     }
-    .lia:hover, .lia:focus, .current{
+    .lia:hover, .lia:focus{
         color: var(--ocean-color);
-        border-radius: 2px;
-        border-bottom: 4px solid var(--ocean-color);
-        padding-bottom: 23.5px;
-        width: 48px;
-        flex-shrink: 0;
-        transition: var(--transition);
+    }
+    .social-media-list-h{
+        display: flex;
+        justify-content: center;
+        gap: 56px;
+        list-style: none; 
+        margin-bottom: 40px;
     }
     .contact{
         color: var(--slate-color); 
@@ -2106,7 +2146,7 @@ svg.close{
         color: var(--cloud-color);
         line-height: 1.5;
         letter-spacing: 0.02em;
-
+        width: 268px;
     }
     .link{  
         text-decoration: none;
@@ -2159,7 +2199,7 @@ svg.close{
         flex-wrap: wrap;
     }
     .a_list{
-        display: inline-flex;
+        display: none;
         align-items: flex-start;
         gap: 40px;
         padding-block: 24px;
@@ -2181,6 +2221,40 @@ svg.close{
     .contact_list{
         gap: 40px;
         padding-block: 24px;
+    }
+    .contacts_list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 284px;
+        margin-bottom: 48px;
+    }
+    .contact-h{
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120% ;
+        letter-spacing: 0.4px;
+        color: var(--slate-color);
+    }
+    .contact-h:hover, .contact-h:focus{
+        font-family: Roboto;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111.111%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+        color: var(--iris-color);
+    }
+    .a_lists{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 80px;
     }
     
     button.service {
@@ -2265,7 +2339,9 @@ svg.close{
         margin-bottom: -7px;
     }
     nav.logo{
-        padding-block: 25.5px;
+        padding-top: 25px;
+        padding-block: 25.5px 23.5px;
+        padding-left: 16px;
     }
     .jpg{
         width: 360px;
@@ -2287,8 +2363,13 @@ svg.close{
         display: block;
         column-gap: 60px;
     }
+    .customers{
+        max-width: 428px;
+        margin-inline: auto;
+        padding-block: 96px;
+    }
     .customers-list{
- 
+        
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -2307,7 +2388,11 @@ svg.close{
         border: 0;
         
     }
-    
+    .footer-media-text{
+        margin-inline: auto;
+        padding-bottom: 16px;
+    }
+
     .social-media-list
     {
         display: flex;
@@ -2321,30 +2406,15 @@ svg.close{
         flex-direction: column;
         align-items: flex-start;
     }
-    
-    
-    .social-media {
-        margin:auto;
-         
-    }
     .social-media>p {
         color: var(--white);
       font-weight: 500;
       line-height: 24px;
       letter-spacing: 0.02em;
-      text-align: left;
       margin-bottom: 16px;
-      
+      margin-top: 72px;
+      margin-inline: auto;
     }
-    
-      
-    
-     
-    
-      footer>.logo {
-        display: inline-block;
-  
-      }
       .photos:hover{
         box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
         
@@ -2375,7 +2445,7 @@ svg.close{
     }
     .logo-with-description{
         display: block;
-        margin: auto;
+        margin-top: 97.5px;
     }
     .costumers {
         width: 168px;
@@ -2444,7 +2514,6 @@ svg.close{
     .modal-body {
         position: relative;
         width: 408px;
-        height: 584px;
         margin: auto;
         background-color: #fff;
         transition: scale 250ms;
@@ -2719,17 +2788,29 @@ svg.close{
         margin-right: 159px;
         border: none;
     }
-    
+    .down {
+        background-color: var(--navyblue, #2e2f42);
+        padding-top: 97.5px;
+        padding-bottom: 96px;
+        max-width: 428px;
+        margin-inline: auto;
+        
+
+      }
+
     .footer-subscribe-icon {
         width: 24px;
         height: 24px;
     }
-    .footer-subscribe {
-        margin-left: auto;
+    .footer-subscribe>form {
+        margin-top: 72px;;
+        margin-inline: auto;
+        text-align: center;
     }
-    .footer-field-wrapper {
-        display: flex;
-    }
+   .button-subscribe{
+        margin-inline: auto;
+        margin-top: 16px;
+   }
     
     .footer-field-wrapper > input {
         width: 264px;
@@ -2747,7 +2828,8 @@ svg.close{
         letter-spacing: 0.48px;
         outline: none;
         padding-left: 8px;
-        width: 398px;
+        margin-inline: auto;
+        padding-bottom: 16px;
     }
     .footer-input::placeholder {
         color: var(--white);

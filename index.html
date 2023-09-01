@@ -31,7 +31,61 @@
       <li><a class="contact link" href="tel:+11(000)111-11-11">+11(000)111-11-11</a></li> 
     </ul>
     </address>
+    <div class="hamburger">
+    <button type="button" class="hamburger-button" data-modal-open>
+      <svg class="hamburger-svg" width="32px" height="32px"><use href="./images/icons.svg#icon-menu"></use></svg>
+    </button>
+    <div class="modal-h is-hidden" data-modal>
+      <div class="modal-body">
+        <button class="modal-close" data-modal-close>
+          <svg width="8px" height="8px">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="a_lists list">
+          <li><a class="lia current link" href="./index.html">Studio</a></li>
+          <li><a class="lia link" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="lia link" href="">Contacts</a></li>
+         </ul>
+         <ul class="contacts_list list">
+          <li><a class="contact-h link" href="tel:+11(000)111-11-11">+11(000)111-11-11</a></li> 
+          <li><a class="contact-h link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        </ul>
+        <ul class="social-media-list-h">
+          <li class="circle">
+            <a href="">
+              <svg  width="16px" height="16px">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="circle">
+            <a href="">
+              <svg width="16px" height="16px">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>  
+                
+            </a>
+          </li>
+          <li class="circle">
+            <a href="">
+              <svg width="16px" height="16px">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="circle">
+            <a href="">
+              <svg width="16px" height="16px">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+              </a>
+          </li>
+      </ul>
     </div>
+    </div>
+  </div>
     </header>
     <main>
         <section class="order section">
@@ -396,7 +450,6 @@
       <form>
         <p class="footer-media-text">Subscribe</p>
         <div class="footer-field-wrapper">
-          <label for="email"></label>
           <input class="footer-input" id="email" type="email" name="email" placeholder="E-mail" required />
           <div>
             <button class="button-subscribe" type="submit">
