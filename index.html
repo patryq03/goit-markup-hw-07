@@ -32,12 +32,13 @@
     </ul>
     </address>
     <div class="hamburger">
-    <button type="button" class="hamburger-button js-open-menu" >
+    <button type="button" class="menu-toggle hamburger-button js-open-menu" aria-expanded="false"
+    aria-controls="mobile-menu">
       <svg class="hamburger-svg" width="32px" height="32px"><use href="./images/icons.svg#icon-menu"></use></svg>
     </button>
-    <div class="modal-h is-hidden js-menu-container" >
+    <div class="modal-h is-hidden js-menu-container" id="mobile-menu">
       <div class="modal-body">
-        <button class="modal-close js-close-menu" >
+        <button class="modal-close menu-toggle js-close-menu"  >
           <svg width="8px" height="8px">
             <use href="./images/icons.svg#icon-close-black"></use> 
           </svg>

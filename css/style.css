@@ -348,8 +348,14 @@ li{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.images_list, .workers_list{
+.images_list {
     justify-content: space-between;
+}
+.workers_list{
+    
+        flex-wrap: wrap;
+        justify-content: center;   
+        column-gap: 24px;
 }
 .contact_list{
     gap: 40px;
@@ -456,10 +462,12 @@ nav.logo{
     
 }
 .points{
-    justify-content: space-between;
+    justify-content: center; 
+    gap: 24px;
 }
 .customers-list{
-    justify-content: space-between;
+    justify-content: center; 
+    gap: 24px;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
@@ -999,6 +1007,7 @@ svg.close{
     .down{
         display: block;
         padding-top: 101.5px;
+        justify-content: center;
     }
     .container{
         
@@ -1275,12 +1284,15 @@ svg.close{
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    .images_list, .workers_list{
+    .images_list{
         justify-content: space-between;
         flex-wrap: wrap;
     }
     .workers_list{
         padding-inline: auto;
+        flex-wrap: wrap;
+        justify-content: center;   
+        column-gap: 24px;
     }
     .contact_list{
         display: flex;
@@ -1398,7 +1410,6 @@ svg.close{
         column-gap: 24px;
         list-style: none;
         justify-content: center;
-        row-gap: 72px;
 
     }
     .customers{
@@ -1884,7 +1895,7 @@ svg.close{
     nav{
         float: left;
     }
-    .hamburger-button{
+    .menu-toggle{
         position: absolute;
         top: 24px;
         right: 16px;
@@ -1932,8 +1943,9 @@ svg.close{
         transition: opacity 250ms;
         display: flex;
         flex-direction: row;
+        width: 100px;
     }
-    .modal-h>.modal-bo
+
     .photos.bigger_p, .photos.smaller_p{
         padding-inline: 16px;
         gap: 8px;
@@ -2241,7 +2253,6 @@ svg.close{
         margin-inline: auto;
         gap: 24px;
     }
-    
     .contact_list{
         gap: 40px;
         padding-block: 24px;
@@ -2854,4 +2865,14 @@ svg.close{
         padding: 8px 212px 8px 16px;
     }
 
+}
+@media screen and (max-width: 768px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .first-section {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(https://s3-alpha-sig.figma.com/img/7c8d/46d4/7e83b6c8ee4603ea892aa8aaebb3c5fe?Expires=1693785600&Signature=fNPichXWz1xx6AOjBn7SjwH016MEoHDd-sxfF9t3rZ8w5KLGg7yAAKC8t8Vdkgfi7aX3zmHhItkeQ81gGE97ysfUTPuZaTY1kgJoiO478jQEnHMzglTDDu1fcpnFYlrKraq2DpkKj1ya7gdKIzQ33D9bshZZxRz-DNgQCA19JHFTuCTVWQF1E6u50snLjmusvL0OSUrvviXcsSYS2T5d8zIXHmxaUA9E9ID9LepKTmtoGGXjdBFrHqK59edgw6A~PL60vRpJrjPgj5zvllEXryYlpbznepUzJYu~kHjUCudihWI842fc-~WkVvuCaUYoazxk0Ydol6F5fLEk7Xqvcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-size: cover;
+  }
 }
