@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio</title>
     <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -32,17 +32,17 @@
     </ul>
     </address>
     <div class="hamburger">
-    <button type="button" class="hamburger-button" data-modal-open>
+    <button type="button" class="hamburger-button js-open-menu" >
       <svg class="hamburger-svg" width="32px" height="32px"><use href="./images/icons.svg#icon-menu"></use></svg>
     </button>
-    <div class="modal-h is-hidden" data-modal>
+    <div class="modal-h is-hidden js-menu-container" >
       <div class="modal-body">
-        <button class="modal-close" data-modal-close>
+        <button class="modal-close js-close-menu" >
           <svg width="8px" height="8px">
             <use href="./images/icons.svg#icon-close-black"></use> 
           </svg>
         </button>
-
+        
         <ul class="a_lists list">
           <li><a class="lia current link" href="./index.html">Studio</a></li>
           <li><a class="lia link" href="./portfolio.html">Portfolio</a></li>
@@ -86,6 +86,7 @@
     </div>
     </div>
   </div>
+        </div>
     </header>
     <main>
         <section class="order section">
@@ -103,30 +104,30 @@
                   <div>
                     <label for="username"><span class="input-text">Name</span></label>
                     <div class="modal-field-wrapper">
-                      <input id="username" type="text" name="name" required />
+                      <input id="username" type="text" name="name" required >
                       <svg class="modal-icon-1"><use href="./images/icons.svg#icon-person-black"></use></svg>
                     </div>
                   </div>
                   <div>
                     <label for="phone"><span class="input-text">Phone</span></label>
                     <div class="modal-field-wrapper">
-                      <input id="phone" type="tel" name="phone" pattern="\d*" minlength="9" maxlength="12" required />
+                      <input id="phone" type="tel" name="phone" pattern="\d*" minlength="9" maxlength="12" required >
                       <svg class="modal-icon-2"><use href="./images/icons.svg#icon-phone-black"></use></svg>
                     </div>
                   </div>
                   <div>
                     <label for="e-mail"><span class="input-text">E-mail</span></label>
                     <div class="modal-field-wrapper">
-                      <input id="e-mail" type="email" name="e-mail" required />
+                      <input id="e-mail" type="email" name="e-mail" required >
                       <svg class="modal-icon-2"><use href="./images/icons.svg#icon-email-black"></use></svg>
                     </div>
                   </div>
                   <div class="modal-field-wrapper">
-                    <label for="comment"><span class="input-text">Comment</span></label>
+                    <label for="comment"><span class="input-text">Comment</span></label><br>
                     <textarea class="modal-comment" name="comment" id="comment" placeholder="Text input"></textarea>
                   </div>
                   <div class="tc-wrapper">
-                    <input class="modal-check visually-hidden" name="tc" id="tc" type="checkbox" required />
+                    <input class="modal-check visually-hidden" name="tc" id="tc" type="checkbox" required >
                     <label class="modal-check-text" for="tc">
                       <span class="modal-check-span">
                         <svg class="checkbox-icon"><use href="./images/icons.svg#icon-Checkbox1"></use></svg>
@@ -142,8 +143,7 @@
                 </form>
               </div>
             </div>
-            
-        </section>
+           </section> 
         <section class="section"> 
             <div class="container">
             <h2 hidden >Activity</h2>
@@ -353,6 +353,7 @@
                       </li>
                   </ul>
                   </article> 
+                  </ul>
         </div>
         </section>
         <section class="customers section">
@@ -450,7 +451,7 @@
       <form>
         <p class="footer-media-text">Subscribe</p>
         <div class="footer-field-wrapper">
-          <input class="footer-input" id="email" type="email" name="email" placeholder="E-mail" required />
+          <input class="footer-input" id="email" type="email" name="email" placeholder="E-mail" required >
           <div>
             <button class="button-subscribe" type="submit">
               Subscribe

@@ -52,7 +52,7 @@ body{
     font-family: Roboto, sans-serif;
     color: var(--slate-color);
     background-color: var(--white);
-    max-width: 1440px;
+    width: 1440px;
     margin: auto;
 }
 main{
@@ -61,7 +61,7 @@ main{
 footer{
     background-color: var(--navyblue-color);
     color: var(--white);
-    max-width: 1440px;
+    width: 1440px;
     flex-shrink: 0; 
     padding-left: 156px;
     padding-top: 101.5px;
@@ -87,13 +87,13 @@ footer{
     padding-top: 101.5px;
 }
 .container{
-    min-width: 1200px;
+    width: 1200px;
     padding-inline: 15px;
-    margin: auto;
+    margin-inline: auto;
 }
 
 header{
-    max-width: 1440px;
+    width: 1440px;
     display: flex;
     flex-shrink: 0;
     border-bottom: 1px solid var(--cornflower, #E7E9FC);
@@ -162,7 +162,7 @@ li{
     background-color: var(--white);
 }
 .team{
-    max-width: 1440px;
+    width: 1440px;
     flex-shrink: 0;
     background-color: var(--cloud-color);
 }
@@ -171,7 +171,7 @@ li{
     background-size: cover;
     text-align: center;
     color: var(--white);
-    max-width: 1440px;
+    width: 1440px;
     flex-shrink: 0;
     margin-top: -5px;
 }
@@ -759,21 +759,14 @@ svg.close{
 }
 .button-send {
     display: inline-flex;
+    padding: 16px 32px;
     align-items: flex-start;
     gap: 10px;
-	border-radius: 4px;
-	background: var(--iris-color);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-	max-width: 169px;
-	padding: 16px 32px;
-	color: #fff;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: 0.64px;
-	margin-block: 24px;
-    text-align: center;
+    border-radius: 4px;
+    background-color: var(--iris, #4D5AE5);
+    margin-bottom: 68px;
     border: 0;
+    color: var(--white);
 }
 .input-text > a {
 	text-decoration: underline;
@@ -976,12 +969,13 @@ svg.close{
     footer{
         background-color: var(--navyblue-color);
         color: var(--white);
-        width: 100%;
+        max-width: 1200px;
         flex-shrink: 0; 
         display: flex;
         flex-wrap: wrap;
         padding: auto;
         padding-left: 108px;
+        align-items: center;
     }
     .footer-media-text{
         padding-bottom: 16px;
@@ -1014,14 +1008,14 @@ svg.close{
     }
     
     header{
-        max-width: 1440px;
+        min-width: 768px;
+        max-width: 1200px;
         display: flex;
-        flex-wrap: wrap;
         flex-shrink: 0;
         border-bottom: 1px solid var(--cornflower, #E7E9FC);
         background: var(--white, #FFF);
-        align-items: center;
         padding-bottom: -1.5px;
+        margin-inline: auto;
     }
     
     .logo{
@@ -1092,7 +1086,7 @@ svg.close{
         background-color: var(--cloud-color);
         flex-shrink: 0;
         padding-block: 96px;
-        min-width: 768px;
+        max-width: 1200px;
         margin-inline: auto;
     }
     .order{
@@ -1193,7 +1187,7 @@ svg.close{
         border-radius: 2px;
         border-bottom: 4px solid var(--ocean-color);
         padding-bottom: 23.5px;
-        max-width: 48px;
+        width: 48px;
         flex-shrink: 0;
         transition: var(--transition);
     }
@@ -1356,7 +1350,7 @@ svg.close{
     
     .point_li{
         display: flex;
-        max-width: 264px;
+        width: 264px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -1364,7 +1358,7 @@ svg.close{
     }
     .photos{
         display: flex;
-        max-width: 360px;
+        width: 360px;
         padding-bottom: 0px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1380,7 +1374,7 @@ svg.close{
         padding-block: 25.5px;
     }
     .jpg{
-        max-width: 360px;
+        width: 360px;
         flex-shrink: 0;
         margin-top: -32px;
     }
@@ -1399,25 +1393,24 @@ svg.close{
         justify-content: space-between;
     }
     .customers-list{
+        display: grid;
         grid-template-columns: repeat(3, 168px);
         column-gap: 24px;
-        display: flex;
-        margin-inline: auto;
-        margin-bottom: -72px;
-        flex-wrap: wrap;
-        list-style-type: none;
+        list-style: none;
+        justify-content: center;
+        row-gap: 72px;
+
     }
     .customers{
-        max-width: 768px;
+        max-width: 1200px;
         padding-block: 120px;
         margin-inline: auto;
-        
     }
     section{
         margin-inline: auto;
     }
     .customer{
-        max-width: 168px;
+        width: 168px;
         height: 88px;
         border: 1px solid lightgray;
         border-radius: 4px;
@@ -1439,11 +1432,13 @@ svg.close{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        align-items: start;
     }
     
     
     .social-media {
-        margin-left: 120px;
+        margin-left: 150px;
+        margin-top: -110px;
          
     }
     .social-media>p {
@@ -1468,7 +1463,7 @@ svg.close{
         
       }
       .customers-icon {
-        max-width: 168px;
+        width: 168px;
         height: 88px;
         flex-shrink: 0;
         fill: var(--light-slate);
@@ -1490,14 +1485,14 @@ svg.close{
         display: block;
     }
     .costumers {
-        max-width: 168px;
+        width: 168px;
         height: 88px;
         fill: var(--light-slate);
         border: 1px solid var(--light-slate);
         border-radius: 4px;
       }
      .icon{
-        max-width: 24px;
+        width: 24px;
         height: 24px;
         flex-shrink: 0;
             
@@ -1531,14 +1526,14 @@ svg.close{
         transition: var(--transition);
       }
     .circle-footer>svg {
-        max-width: 16px;
+        width: 16px;
         height: 16px;
       }
     .circle-footer>a{ 
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 40px;
+        width: 40px;
         height: 40px;
         border-radius: 50%;
         background-color: var(--iris-color);
@@ -1555,7 +1550,7 @@ svg.close{
     
     .modal-body {
         position: relative;
-        max-width: 408px;
+        width: 408px;
         height: 584px;
         margin: auto;
         background-color: #fff;
@@ -1570,7 +1565,7 @@ svg.close{
         position: absolute;
         top: 24px;
         right: 24px;
-        max-width: 24px;
+        width: 24px;
         height: 24px;
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1628,19 +1623,19 @@ svg.close{
         transition: var(--transition);
     }
     .close {
-        max-width: 12px;
+        width: 12px;
         height: 12px;
     }
     svg.close{
         margin: auto;
         height: 8px;
-        max-width: 8px;
+        width: 8px;
         flex-shrink: 0;
         transition: var(--transition);
     
       }
     .form-paragraph{
-        max-width: 360px;
+        width: 360px;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.5;
@@ -1661,7 +1656,7 @@ svg.close{
         padding-left: 38px;
         border-radius: 4px;
         border: 1px solid var(--modal);
-        max-width: 360px;
+        width: 360px;
         transition: 250ms;
         transition-timing-function: var(--tr-function);
     }
@@ -1680,7 +1675,7 @@ svg.close{
         top: 50%;
         transform: translateY(-50%);
         left: 16px;
-        max-width: 18px;
+        width: 18px;
         height: 18px;
         fill: var(--navyblue-color);
     }
@@ -1690,7 +1685,7 @@ svg.close{
         top: 50%;
         transform: translateY(-50%);
         left: 16px;
-        max-width: 18px;
+        width: 18px;
         height: 24px;
         fill: var(--navyblue-color);
     }
@@ -1705,21 +1700,14 @@ svg.close{
     }
     .button-send {
         display: inline-flex;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 4px;
-        background: var(--iris-color);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        max-width: 169px;
-        padding: 16px 32px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.64px;
-        margin-top: 24px;
-        text-align: center;
-        border: 0;
+    padding: 16px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 4px;
+    background-color: var(--iris, #4D5AE5);
+    margin-bottom: 68px;
+    border: 0;
+    color: var(--white);
     }
     .input-text > a {
         text-decoration: underline;
@@ -1728,7 +1716,7 @@ svg.close{
     .modal-comment {
         border: none;
         outline: none;
-        max-width: 360px;
+        width: 360px;
         height: 120px;
         padding-top: 8px;
         padding-left: 16px;
@@ -1760,12 +1748,12 @@ svg.close{
     .button-send-wrapper {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        max-width: 360px;
+        align-items: center;
+        text-align: center;
     }
     .visually-hidden {
         position: absolute;
-        max-width: 1px;
+        width: 1px;
         height: 1px;
         margin: -1px;
         border: 0;
@@ -1786,7 +1774,7 @@ svg.close{
     }
     
     .modal-check-text span {
-        max-width: 16px;
+        width: 16px;
         height: 16px;
         border: 1px solid var(--modal);
         border-radius: 2px;
@@ -1799,7 +1787,7 @@ svg.close{
     }
     
     .checkbox-icon {
-        max-width: 16px;
+        width: 16px;
         height: 16px;
     }
     
@@ -1835,10 +1823,6 @@ svg.close{
     .footer-subscribe-icon {
         width: 24px;
         height: 24px;
-    }
-    .footer-subscribe {
-        
-
     }
     .footer-field-wrapper {
         display: flex;
@@ -1949,6 +1933,7 @@ svg.close{
         display: flex;
         flex-direction: row;
     }
+    .modal-h>.modal-bo
     .photos.bigger_p, .photos.smaller_p{
         padding-inline: 16px;
         gap: 8px;
@@ -1975,7 +1960,7 @@ svg.close{
         min-width: 480px;
         max-width: 768px;
         padding-inline: 16px;
-        margin: auto;
+        margin-inline: auto;
     }
     
     header{
@@ -2254,7 +2239,7 @@ svg.close{
     .workers_list{
         display: block;
         margin-inline: auto;
-        column-gap: 72px;
+        gap: 24px;
     }
     
     .contact_list{
@@ -2403,18 +2388,19 @@ svg.close{
         column-gap: 60px;
     }
     .customers{
-        width: 100%;
+        max-width: 768px;
         margin-inline: auto;
         padding-block: 96px;
     }
     .customers-list{
 
-
-
-        display: flex;
-        flex-wrap: wrap;
+        list-style: none;
         list-style-type: none;
-        gap: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, 190px);
+        justify-content: center;
+        column-gap: 16px;
+        row-gap: 72px;
 
     }
     .customer{
@@ -2704,7 +2690,7 @@ svg.close{
         border-radius: 4px;
         background: var(--iris-color);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        max-width: 169px;
+        width: 169px;
         padding: 16px 32px;
         color: #fff;
         font-size: 16px;
@@ -2755,7 +2741,7 @@ svg.close{
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        max-width: 360px;
+        width: 360px;
     }
     .visually-hidden {
         position: absolute;
