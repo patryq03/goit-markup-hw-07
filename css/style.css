@@ -939,8 +939,11 @@ svg.close{
         box-sizing: border-box;
     }
     .section{
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 96px;
+        padding-bottom: 96px;
+            max-width: 768px;
+        margin-inline: auto;
+        padding-inline: 16px;
     }
     .third_section{
         margin-top: -120px;
@@ -955,8 +958,10 @@ svg.close{
         float: left;
     }
     address{
-        float: right;
-        
+        width: 119px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
     }
     body{
         font-family: Roboto, sans-serif;
@@ -971,11 +976,15 @@ svg.close{
     footer{
         background-color: var(--navyblue-color);
         color: var(--white);
-        max-width: 1440px;
+        width: 100%;
         flex-shrink: 0; 
         display: flex;
         flex-wrap: wrap;
         padding: auto;
+        padding-left: 108px;
+    }
+    .footer-media-text{
+        padding-bottom: 16px;
     }
     .photos.bigger_p, .photos.smaller_p{
         padding-inline: 16px;
@@ -998,10 +1007,10 @@ svg.close{
         padding-top: 101.5px;
     }
     .container{
-        max-width: 1200px;
-        min-width: 768px;
-        padding-inline: 15px;
+        
+        max-width: 768px;
         margin-inline: auto;
+        padding-inline: 16px;
     }
     
     header{
@@ -1038,6 +1047,11 @@ svg.close{
     }
     .buttons{
         text-align: center;
+    }
+    .contacts_list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
     button{
         
@@ -1076,9 +1090,10 @@ svg.close{
     }
     .team{
         background-color: var(--cloud-color);
-        max-width: 1440px;
         flex-shrink: 0;
-        
+        padding-block: 96px;
+        min-width: 768px;
+        margin-inline: auto;
     }
     .order{
         background-image:linear-gradient(hsl(237 18% 22% / 0.7), hsl(237 18% 22% / 0.7)), url(https://s3-alpha-sig.figma.com/img/7c8d/46d4/7e83b6c8ee4603ea892aa8aaebb3c5fe?Expires=1693785600&Signature=fNPichXWz1xx6AOjBn7SjwH016MEoHDd-sxfF9t3rZ8w5KLGg7yAAKC8t8Vdkgfi7aX3zmHhItkeQ81gGE97ysfUTPuZaTY1kgJoiO478jQEnHMzglTDDu1fcpnFYlrKraq2DpkKj1ya7gdKIzQ33D9bshZZxRz-DNgQCA19JHFTuCTVWQF1E6u50snLjmusvL0OSUrvviXcsSYS2T5d8zIXHmxaUA9E9ID9LepKTmtoGGXjdBFrHqK59edgw6A~PL60vRpJrjPgj5zvllEXryYlpbznepUzJYu~kHjUCudihWI842fc-~WkVvuCaUYoazxk0Ydol6F5fLEk7Xqvcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
@@ -1110,17 +1125,23 @@ svg.close{
         transition: var(--transition);
     }
     .title-of-description{
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: var(--navyblue-color);
-        padding-bottom: 0px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 111.111%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+        padding-bottom: 8px;
+
     }
     .description{
         font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.32px;
+        margin-bottom: 72px;
+    }
+    .points_list{
+        column-gap: 72px;
     }
     .bigger_p{
         color: var(--navyblue-color);
@@ -1207,12 +1228,7 @@ svg.close{
         color: var(--slate-color);
         transition: var(--transition);
     }
-    address{
-        font-style: normal;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
+   
     .list{
         list-style: none;
         
@@ -1268,6 +1284,9 @@ svg.close{
     .images_list, .workers_list{
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+    .workers_list{
+        padding-inline: auto;
     }
     .contact_list{
         display: flex;
@@ -1380,13 +1399,22 @@ svg.close{
         justify-content: space-between;
     }
     .customers-list{
-        justify-content: space-between;
-        flex-shrink: 0;
+        grid-template-columns: repeat(3, 168px);
+        column-gap: 24px;
         display: flex;
-       
+        margin-inline: auto;
         margin-bottom: -72px;
         flex-wrap: wrap;
         list-style-type: none;
+    }
+    .customers{
+        max-width: 768px;
+        padding-block: 120px;
+        margin-inline: auto;
+        
+    }
+    section{
+        margin-inline: auto;
     }
     .customer{
         max-width: 168px;
@@ -1482,7 +1510,7 @@ svg.close{
         display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 40px;
+      width: 40px;
       height: 40px;
       border-radius: 50%;
       background-color: var(--iris-color);
@@ -1784,7 +1812,7 @@ svg.close{
         stroke: var(--ocean-color);
     }
     .button-subscribe {
-        max-width: 165px;
+        width: 165px;
         height: 40px;
         margin-left: 24px;
         border-radius: 4px;
@@ -1809,10 +1837,12 @@ svg.close{
         height: 24px;
     }
     .footer-subscribe {
-        margin-left: auto;
+        
+
     }
     .footer-field-wrapper {
         display: flex;
+        margin-bottom: 96px;
     }
     
     .footer-field-wrapper > input {
@@ -1822,6 +1852,7 @@ svg.close{
         border: 1px solid var(--white);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         background-color: var(--navyblue-color);
+        
     }
     
     .footer-input {
@@ -1854,11 +1885,11 @@ svg.close{
 
 @media(min-width:480px ) and (max-width:768px ) {
     .section{
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
     .third_section{
-        margin-top: -120px;
+        margin-top: -96px;
         display: none;
     }
     article{
@@ -1872,8 +1903,8 @@ svg.close{
     .hamburger-button{
         position: absolute;
         top: 24px;
-        right: 0px;
-        background-color: transparent;
+        right: 16px;
+        background-color: var(--white);
         border: none;
     }
     .hamburger>svg{
@@ -1898,9 +1929,10 @@ svg.close{
     footer{
         background-color: var(--navyblue-color);
         color: var(--white);
-        max-width: 1440px;
+        width: 100%;
         flex-shrink: 0; 
-        margin-inline: auto;
+        padding-top: 97.5px;
+        padding-bottom: 96px;
         padding-inline: 15px;
         display: flex;
         flex-direction: column;
@@ -2057,18 +2089,25 @@ svg.close{
         transition: var(--transition);
     }
     .title-of-description{
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: var(--navyblue-color);
-        padding-bottom: 0px;
+        width: 100%;
+        color: var(--navyblue-color);        
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111.111%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+        text-align: center;
     }
     .description{
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.32px;
+        color: var(--slate-color);
+        align-self: stretch;
+            }
     .bigger_p{
         color: var(--navyblue-color);
         font-size: 20px;
@@ -2318,12 +2357,12 @@ svg.close{
     
     .point_li{
         display: flex;
-        width: 264px;
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
         margin: auto;
-        padding-bottom: 72px;
+        padding-bottom: 72px;    
     }
     .photos{
         display: flex;
@@ -2364,27 +2403,25 @@ svg.close{
         column-gap: 60px;
     }
     .customers{
-        max-width: 428px;
+        width: 100%;
         margin-inline: auto;
         padding-block: 96px;
     }
     .customers-list{
-        
-        display:flex;
-        flex-direction: row;
+
+
+
+        display: flex;
         flex-wrap: wrap;
- 
-        justify-content: space-between;
-        flex-basis: calc((100%=3*16px)/2);
         list-style-type: none;
+        gap: 16px;
+
     }
     .customer{
-        width: 168px;
+        width: 190px;
         border: 1px solid lightgray;
         border-radius: 4px;
         padding: 16px 32px;
-        padding: 0;
-        margin: 0;
         border: 0;
         
     }
@@ -2788,15 +2825,6 @@ svg.close{
         margin-right: 159px;
         border: none;
     }
-    .down {
-        background-color: var(--navyblue, #2e2f42);
-        padding-top: 97.5px;
-        padding-bottom: 96px;
-        max-width: 428px;
-        margin-inline: auto;
-        
-
-      }
 
     .footer-subscribe-icon {
         width: 24px;
