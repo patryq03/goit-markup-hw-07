@@ -52,7 +52,7 @@ body{
     font-family: Roboto, sans-serif;
     color: var(--slate-color);
     background-color: var(--white);
-    width: 1440px;
+    min-width: 1440px;
     margin: auto;
 }
 main{
@@ -61,7 +61,7 @@ main{
 footer{
     background-color: var(--navyblue-color);
     color: var(--white);
-    width: 1440px;
+    min-width: 1440px;
     flex-shrink: 0; 
     padding-left: 156px;
     padding-top: 101.5px;
@@ -87,13 +87,13 @@ footer{
     padding-top: 101.5px;
 }
 .container{
-    width: 1200px;
+    min-width: 1200px;
     padding-inline: 15px;
     margin-inline: auto;
 }
 
 header{
-    width: 1440px;
+    min-width: 1440px;
     display: flex;
     flex-shrink: 0;
     border-bottom: 1px solid var(--cornflower, #E7E9FC);
@@ -162,7 +162,7 @@ li{
     background-color: var(--white);
 }
 .team{
-    width: 1440px;
+    min-width: 1440px;
     flex-shrink: 0;
     background-color: var(--cloud-color);
 }
@@ -171,7 +171,7 @@ li{
     background-size: cover;
     text-align: center;
     color: var(--white);
-    width: 1440px;
+    min-width: 1440px;
     flex-shrink: 0;
     margin-top: -5px;
 }
