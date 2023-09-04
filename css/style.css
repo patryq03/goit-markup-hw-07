@@ -29,6 +29,9 @@
     padding-top: 120px;
     padding-bottom: 120px;
 }
+.menu-mobile{
+    display: none;
+}
 .third_section{
     margin-top: -120px;
     display: block;
@@ -945,6 +948,9 @@ svg.close{
             max-width: 768px;
         margin-inline: auto;
         padding-inline: 16px;
+    }
+    .menu-mobile{
+        display: none;
     }
     .third_section{
         margin-top: -120px;
@@ -1895,41 +1901,7 @@ svg.close{
     nav{
         float: left;
     }
-    .menu-toggle{
-        min-height: 40px;
-        min-width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        cursor: pointer;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-        position:absolute;
-        top: 1.2em;
-        right: .75em;
-    }
-    .menu-toggle:active {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      .menu-button{
-        background-color: var(--cornflower-color);
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        fill: var(--navyblue-color);
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        padding-top: 7px;
-      }
+
     .hamburger>svg{
         fill: black;
         stroke: black;
@@ -1961,18 +1933,7 @@ svg.close{
         flex-direction: column;
         align-items: center;
     }
-    .modal-h {
-        position: fixed;
-        inset: 0;
-        background-color: rgb(0 0 0 / 0.5);
-        opacity: 1;
-        pointer-events: all;
-        visibility: visible;
-        transition: opacity 250ms;
-        display: flex;
-        flex-direction: row;
-        width: 100px;
-    }
+
 
     .photos.bigger_p, .photos.smaller_p{
         padding-inline: 16px;
@@ -2014,7 +1975,7 @@ svg.close{
         padding-top: 25.5px;
         padding-bottom: 23.5px;
     }
-    .hamburger-svg{
+    .icon-hamburger>svg{
 
          fill: var(--black);
         stroke: var(--black);
@@ -2583,24 +2544,7 @@ svg.close{
         text-align: start;
         padding-left:24px ;
     }
-        .mobile-menu {
-            position: fixed;
-            inset: 0;
-            transform: translateX(100%);
-            transition: translate 400ms;
-          visibility: hidden;
-            background-color: white;
-          width: 100vw;
-          height: 100vh;
-        }
-    .mobile-menu.is.open{
-        transform: translateY(0);
-        visibility: visible;
-    }
-    .hamburger>button{
-        display: flex;
-    justify-content: flex-end;
-    }
+        
     .modal-close {
         background-color: var(--cornflower-color);
         position: absolute;
@@ -2914,7 +2858,59 @@ svg.close{
         letter-spacing: 0.48px;
         padding: 8px 212px 8px 16px;
     }
-
+    .mobile-only {
+        display: block;
+      }
+      .menu-toggle{
+        border: none;
+        background-color: white;
+        position: absolute;
+        top: 24px;
+        right: 16px;
+      }
+      .hamburger-svg{
+        stroke: var(--navyblue-color);
+        stroke-width: 3px;
+      }
+      .mobile-menu {
+        position: fixed;
+        inset: 0;
+        translate: -100% 0 0;
+        transition: translate 400ms;
+        background-color: white;
+        padding-inline: 40px;
+      }
+      .menu-button {
+        background-color: var(--cornflower-color);
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        fill: var(--navyblue-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+      }
+      
+      .menu-button:focus {
+        outline: none;
+      }
+      
+      .menu-button:hover,
+      .menu-button:active {
+        color: rgba(33, 150, 243, 1);
+      }
+      .menu.is-open .js-close-menu {
+        display: block;
+      }
+      
+      .mobile-menu.is-open {
+        translate: none;
+      }
 }
 @media screen and (max-width: 768px) and (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
