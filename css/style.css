@@ -1896,12 +1896,40 @@ svg.close{
         float: left;
     }
     .menu-toggle{
+        min-height: 40px;
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        position:absolute;
+        top: 1.2em;
+        right: .75em;
+    }
+    .menu-toggle:active {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .menu-button{
+        background-color: var(--cornflower-color);
         position: absolute;
         top: 24px;
-        right: 16px;
-        background-color: var(--white);
-        border: none;
-    }
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        fill: var(--navyblue-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+      }
     .hamburger>svg{
         fill: black;
         stroke: black;
@@ -2555,7 +2583,24 @@ svg.close{
         text-align: start;
         padding-left:24px ;
     }
-    
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            transform: translateX(100%);
+            transition: translate 400ms;
+          visibility: hidden;
+            background-color: white;
+          width: 100vw;
+          height: 100vh;
+        }
+    .mobile-menu.is.open{
+        transform: translateY(0);
+        visibility: visible;
+    }
+    .hamburger>button{
+        display: flex;
+    justify-content: flex-end;
+    }
     .modal-close {
         background-color: var(--cornflower-color);
         position: absolute;
@@ -2570,6 +2615,11 @@ svg.close{
         display: flex;
         justify-content: center;
         padding-top: 7px;
+    }
+    .modal-close>svg{
+        position: absolute;
+        width: 8px;
+        height: 8px;
     }
     .modal-close:hover{
         background-color: var(--ocean-color);
